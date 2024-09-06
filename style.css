@@ -260,13 +260,16 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  width: 100%; /* コンテナの幅を指定 */
+  width: 100%;
+  /* コンテナの幅を指定 */
   gap: 134px;
 }
 .appeal__slide img {
-  width: 200px; /* 画像の幅を一定に設定 */
+  width: 200px;
+  /* 画像の幅を一定に設定 */
   -ms-flex-negative: 0;
-      flex-shrink: 0; /* 画像のサイズが縮まないように設定 */
+      flex-shrink: 0;
+  /* 画像のサイズが縮まないように設定 */
 }
 
 .content {
@@ -346,21 +349,48 @@ body {
   margin: 0 auto;
   line-height: 28.8px;
 }
+.content .example {
+  position: relative;
+}
 .content .example__ttl {
   padding-top: 96px;
   font-size: 32px;
   line-height: 48px;
   text-align: center;
 }
+.content .example__overflow {
+  width: 990px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 .content .example__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 880px;
   margin: 73px auto;
+  gap: 70px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+}
+.content .example__prevBtn {
+  position: absolute;
+  top: 440px;
+  left: 0px;
+  cursor: pointer;
+}
+.content .example__nextBtn {
+  position: absolute;
+  top: 440px;
+  right: 0px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  cursor: pointer;
 }
 .content .example__item {
   width: 405px;
@@ -374,6 +404,8 @@ body {
   line-height: 43.2px;
   padding-top: 32px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 24px;
 }
 .content .example__subTitle span {
